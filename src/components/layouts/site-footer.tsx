@@ -18,7 +18,7 @@ export default function SiteFooter () {
               <span className='sr-only'>{siteConfig.name}</span>
             </NextLink>
             <span className='text-lg'>
-              {`© 2008 - ${new Date().getFullYear()}`}
+              {`© ${new Date().getFullYear()}`}
             </span>
           </div>
           <ul className='space-y-0.5'>
