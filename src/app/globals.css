@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --background: 13.49% 0.019 241.1; #010407 */
+
+@layer base {
+  :root {
+    /* Theme */
+    --background: 56 8% 93%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 238 62% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem; /* 8px */
+    /* Shell */
+    --inner-gutter: 16px;
+    --outer-gutter: 16px;
+    --grid-columns: 6;
+    /* Spacing */
+    --spacing-spacing-1: .25rem;
+    --spacing-spacing-2: .5rem;
+    --spacing-spacing-3: .5rem;
+    --spacing-spacing-4: 1rem;
+    --spacing-spacing-5: 1.5rem;
+    --spacing-spacing-6: 2.25rem;
+    --spacing-spacing-7: 4.5rem;
+    --spacing-spacing-8: 5.25rem;
+    --spacing-spacing-9: 9rem;
+    --spacing-spacing-10: 11.25rem;
+    --spacing-spacing-11: 11.25rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+        /* Shell */
+      --inner-gutter: 16px;
+      --outer-gutter: 16px;
+      --grid-columns: 8;
+      /* Spacing */
+      --spacing-spacing-5: 2.25rem;
+      --spacing-spacing-6: 3rem;
+      --spacing-spacing-7: 5.25rem;
+      --spacing-spacing-8: 7rem;
+      --spacing-spacing-9: 10rem;
+      --spacing-spacing-10: 12.5rem;
+      --spacing-spacing-11: 12.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --inner-gutter: 24px;
+      --outer-gutter: 24px;
+      --grid-columns: 12;
+      /* Spacing */
+      --spacing-spacing-3: .75rem;
+      --spacing-spacing-4: 1.5rem;
+      --spacing-spacing-5: 3rem;
+      --spacing-spacing-6: 3.75rem;
+      --spacing-spacing-7: 6rem;
+      --spacing-spacing-8: 9rem;
+      --spacing-spacing-9: 11.25rem;
+      --spacing-spacing-10: 13.75rem;
+      --spacing-spacing-11: 16.5rem;
+    }
+  }
+
+  @media (min-width: 1680px) {
+    :root {
+      --container-width: 1632px;
+    }
+  }
+
+  .dark {
+    /* Theme */
+    --background: 238 0% 20%;
+    --foreground: 0 0% 98%;
+    --card: 56 0% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 56 0% 20%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 2% 20%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-1.5 w-1.5 bg-primary/40;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-[1ex];
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-primary;
+  }
+
+  *::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  
+  /* Old shadow dom for play button */
+  
+  *::-webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  
+  /* New shadow dom for play button */
+  
+  *::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+}
+
+@layer utilities {
+  /* Typography */
+
+  .f-display-1 {
+    @apply text-[2.625rem] sm:text-[3.4375rem] xl:text-[4.5625rem] leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02];
+  }
+
+  .f-display-2 {
+    @apply text-[2.3rem] sm:text-[3.4375rem] xl:text-[4.5625rem] leading-[1.15] sm:leading-[110%] xl:leading-[100%] font-bold;
+  }
+
+  .f-display-3 {
+    @apply text-[2rem] sm:text-[2.625rem] xl:text-[3.4375rem] leading-[110%] -tracking-[0.01em];
+  }
+
+  .f-heading-1 {
+    @apply text-[1.75rem] sm:text-[2.25rem] xl:text-[3rem] leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02];
+  }
+
+  .f-heading-3 {
+    @apply text-[1.3125rem] md:text-2xl xl:text-[1.75rem] leading-[130%] tracking-normal sm:-tracking-[0.01em] font-medium antialiased;
+  }
+
+  .f-subhead-1 {
+    @apply text-[1.25rem] md:text-2xl xl:text-[1.75rem] leading-[130%] sm:leading-[120%] -tracking-[0.01em] antialiased;
+  }
+
+  .f-subhead-2 {
+    @apply text-[1rem] xl:text-[1.125rem] font-medium leading-[130%] tracking-normal antialiased;
+  }
+
+  .f-body-1 {
+    @apply text-[1rem] xl:text-[1.125rem] tracking-normal leading-[130%] antialiased;
+  }
+
+  .text-p1 {
+    @apply text-[clamp(0.2rem,1dvw+0.8rem,1.7rem)] font-medium;
+  }
+
+  .text-p2 {
+    @apply text-[clamp(0.5rem,1dvw+0.8rem,1.7rem)];
+  }
+
+  .text-p3 {
+    @apply text-lg lg:text-xl;
+  }
+
+  /* Container */
+  
+  .container {
+    @apply w-[calc(var(--container-width,100%)-(2*var(--outer-gutter,0)))] mx-auto;
+  }
+
+  .cols-container {
+    @apply flex flex-wrap -ml-gutter [&>[class*=-cols]]:ml-gutter;
+  }
+
+  .full-bleed-container {
+    @apply 3xl:w-[calc(var(--container-width,100%)-var(--outer-gutter,0))] 3xl:mx-auto 3xl:px-4;
+  }
+}
